@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - JavaScript</title>
+    <!-- Criando componentes em JavaScript -->
+    <script>
+        var empresa = "Gama Academy"
+        var msg = "Sejam bem vindos a "
+            /* Criando um componente de alert */
+            /*alert(msg + empresa);*/
+            /* Criando prompts no JavaScript */
+            /* var nome = prompt("Sejam todos bem vindos a Gama Academy! Qual o seu nome?");
+            alert("Olá " + nome + "! É um grande prazer tê-lo conosco!") */
+            /* Criando funções com o JavaScript */
+        function mensagem() {
+            alert("Oi!")
+        }
+
+        function validar() {
+            var nome = contatos.nome_cliente.value;
+            var email = contatos.email_cliente.value;
+            if (nome == "") {
+                alert("O preenchimento do campo Nome é obrigatório!");
+                contatos.nome_cliente.focus();
+                return false;
+            } else if (email == "" || email.indexOf("@") == -1) {
+                alert("O preenchimento do campo Email é obrigatório! Digite um email válido!");
+                contatos.email_cliente.focus();
+                return false;
+            } else {
+                alert("O nome do cliente é " + nome + " e o e-mail é " + email);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Título do cabeçalho -->
+    <h2>Sejam todos bem vindos!</h2>
+    <!-- Parágrafo -->
+    <p>Para obter maiores informações, clique no botão abaixo:</p>
+    <!-- Botão com função JavaScript-->
+
+    <input type="button" onclick="mensagem()" value="Me Clique">
+
+    <h2>Formulário de Teste em JavaScript</h2>
+    <form id="contatos" method="POST">
+        Nome:<input type="text" name="nome_cliente"><br><br> Email:
+        <input type="text" name="email_cliente"><br><br>
+        <input type="submit" onclick="return validar()" value="Enviar">
+    </form>
+</body>
+
+</html>

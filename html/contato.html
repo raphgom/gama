@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - Contatos</title>
+    <!-- Criando uma chamada de biblioteca de estilios CSS da página -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <!-- Inserindo uma tabela para o menu da página -->
+    <table border="0" width="100%" class="menu">
+        <!-- Inserindo linha na tabela -->
+        <tr>
+            <td align="center">
+                <a href="../HTML/index.html"><img src="..\imagens\logo-gama.png" width="150" height="32"></a>
+            </td>
+            <td align="right">QUEM SOMOS</td>
+            <td align="right">PARA PESSOAS</td>
+            <td align="right">PARA EMPRESAS</td>
+            <td align="right"><a href="../HTML/contato.html">CONTATOS</a></td>
+            <td align="right">CONTEÚDOS</td>
+        </tr>
+    </table>
+    <!-- Inserindo quebra de linha -->
+    <br>
+    <!-- Criando um formulário em uma página HTML -->
+    <form id="contatos" method="POST">
+        <!-- Inserindo uma caixa para guardar os campos do formulário -->
+        <fieldset>
+            <!-- Criando uma legenda para o formulário -->
+            <legend><b>Preencha os campos abaixo para fazer os nossos cursos na Gama Academy</b></legend>
+            <!-- Inserindo os campos do formulário -->
+            <label>Nome: </label><input type="text" name="nome_cliente" maxlength="50" class="campo_nome" required><br><br>
+            <label>Email: </label><input type="email" name="email_cliente" class="campo_email" required><br><br>
+            <label>LinkedIn: </label><input type="url" name="linkedin_cliente"><br><br>
+            <label>Senha: </label><input type="password" name="senha_cliente" class="campo_senha" required><br><br>
+            <!-- Criando um campo de escolhas do tipo Radio Button -->
+            <label>Informe o seu gênero: </label>
+            <input type="radio" name="genero_cliente" value="Feminino" required>Feminino
+            <input type="radio" name="genero_cliente" value="Masculino" required>Masculino
+            <input type="radio" name="genero_cliente" value="Outros" required>Outros
+            <input type="radio" name="genero_cliente" value="Não Informado" required>Não Informado<br><br>
+            <!-- Criando um campo com menu Dropdown -->
+            <label>Escolha o Curso: </label>
+            <select required>
+                <option value="" name="curso_cliente"></option>
+                <option value="HTML" name="curso_cliente">HTML</option>
+                <option value="CSS" name="curso_cliente">CSS</option>
+                <option value="XML" name="curso_cliente">XML</option>
+                <option value="JavaScript" name="curso_cliente">JavaScript</option>
+            </select><br><br>
+            <!-- Criando um campo do tipo CheckBox-->
+            <label>Escolha qual período deseja cursar: </label>
+            <input type="checkbox" name="periodo_cliente" value="Manhã">Manhã
+            <input type="checkbox" name="periodo_cliente" value="Tarde">Tarde
+            <input type="checkbox" name="periodo_cliente" value="Noite">Noite<br><br>
+            <!-- Inserindo um calendário -->
+            <label>Escolha a data que deseja realizar o curso: </label>
+            <input type="date" name="data_curso_cliente" required><br><br>
+            <!-- Inserindo um campo de Mensagem -->
+            <label>Deixe uma mensagem: </label><br>
+            <textarea name="mensagem_cliente" cols="35" rows="3" required></textarea><br><br>
+            <!-- Criando um campo para anexar um documento -->
+            <label>Para fazer o nosso curso, por favor, inserir um comprovante de residência: </label><br>
+            <input type="file" name="arquivo_cliente" required><br><br>
+            <!-- Inserir um botão de envio de dados -->
+            <input type="submit" value="ENVIAR" class="botao">
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
